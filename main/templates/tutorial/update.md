@@ -1,12 +1,14 @@
 {% raw %}
 
-In order to change contact details and update the record in the phonebook database, 
-we again have to do two main things: create the **Handler** that will retrieve the 
-contact from the datastore and the **Template** to update the data in the browser.
-And again we'll also add an appropriate link to the contact list for easy access.
+In order to change contact details and update the record in the phonebook 
+database, we again have to do two main things: create the **Handler** 
+that will retrieve the contact from the datastore and the **Template** 
+to update the data in the browser. And again we'll also add an appropriate 
+link to the contact list for easy access.
 
-Note that this section is actually conceptually very similar to the creation of contacts.
-Therefore, in the final step of this section, we will combine these two tasks into one template.
+Note that this section is actually conceptually very similar to the 
+creation of contacts. Therefore, in the final step of this section, we 
+will combine these two tasks into one template.
 
 ### Handler
 
@@ -113,7 +115,7 @@ button in `contact_update.html` to the following:
 ```
 
 Finally since we deleted the `contact_create.html` we'll have to
-simply update the create handler to render the correct template and by now you
-should be able to find that yourself.
+simply update the create handler to render the correct template 
+and by now you should be able to find that yourself.
 
 {% endraw %}
