@@ -1,9 +1,9 @@
 {% raw %}
 
 In order to present the contacts we will have to do two main things: create the
-**Handler** that will retrieve the contacts from the datastore and the **Template** to
-present them in the browser.
-After this, we need to perform a few smaller tasks like adding a link to the top navigation bar to access this list.
+**Handler** that will retrieve the contacts from the datastore and the **Template** 
+to present them in the browser. After this, we need to perform a few smaller tasks 
+like adding a link to the top navigation bar to access this list.
 
 
 ### Handler
@@ -81,8 +81,8 @@ list instead of going back to the welcome page.
 
 #### Adding a link on the top bar
 
-Add the lines `3 - 5` inside the `<ul class="nav">...</ul>` element that you will find in the
-`header.html` file that is located in the
+Add the lines `3 - 5` inside the `<ul class="nav">...</ul>` element that 
+you will find in the `header.html` file that is located in the
 `templates/bit` directory.
 
 ```html
@@ -97,7 +97,8 @@ Add the lines `3 - 5` inside the `<ul class="nav">...</ul>` element that you wil
 
 After refreshing the page ([http://localhost:8080/](http://localhost:8080/)),
 you should be able to see the link in the top navigation bar.
-Also, if you're currently on the Contact List page, this link should also be indicated as being `active`.
+Also, if you're currently on the Contact List page, this link should also 
+be indicated as being `active`.
 
 #### Changing the redirect
 
