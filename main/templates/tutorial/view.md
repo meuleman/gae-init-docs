@@ -1,9 +1,10 @@
 {% raw %}
-In order to view the contact we will have to do three things: create the
-handler that will retrieve the contact from the datastore, the template to
-view her in the browser and the link on the contact list for easy access.
+In order to view details of individual contacts we again have to perform two main tasks: 
+create the **Handler** that will retrieve the contact from the datastore
+and the **Template** to view the results in the browser.
+And of course we need to be able to select from the contact list a single user whose details we're interested in.
 
-### Contact View Handler
+### Handler
 
 Add the following code to the `contact.py` file:
 
@@ -22,12 +23,10 @@ def contact_view(contact_id):
     )
 ```
 
-### Contact View Template
+### Template
 
-After creating the handler, we are going to need a template to be able to
-present a contact's personal page. Create a new file
-`contact_view.html` in the `templates` directory
-and paste the following code there:
+After creating the handler, we are going to need a template to be able to present a contact's personal detail page. 
+Create a new file `contact_view.html` in the `templates` directory and paste the following code there:
 
 ```html
 # extends 'base.html'
@@ -46,17 +45,16 @@ and paste the following code there:
 # endblock
 ```
 
-It's hard to test this form right now because we have to create manually
-the URL, but in the next section we'll add a link to make it easier to access.
+It's hard to test this template right now because we have to manually construct  
+the URL for the user we're interested in.
+So in the next section we'll add a link to make it easier to access.
 
-### Finalise Contact View
+### Finalise
 
 As a final touch in order to view the contacts we'll modify the contact list
-so when you click on their names you should be able to view them.
+so when you click on a name you're able to view the contact's details page.
 
-
-Find the line that renders the name of the contact and replace it with the
-following:
+Find the line that renders the name of the contact and replace it with the following:
 
 ```html
 ...
