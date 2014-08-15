@@ -1,5 +1,7 @@
-Before deploying your application you must minify and uglify your styles
-and scripts because otherwise your latest changes won't appear online!
+Before deploying your application you must minify/uglify your styles
+and scripts.
+What this does, is it makes your code more efficient, albeit much less human-readable.
+It is also a **required** step in order for your latest changes to appear online!
 
 To minify your styles and scripts execute the `run.py` script by
 providing the `-m` argument
