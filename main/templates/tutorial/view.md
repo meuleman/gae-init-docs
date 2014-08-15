@@ -1,8 +1,9 @@
 {% raw %}
-In order to view details of individual contacts we again have to perform two main tasks: 
-create the **Handler** that will retrieve the contact from the datastore
-and the **Template** to view the results in the browser.
-And of course we need to be able to select from the contact list a single user whose details we're interested in.
+In order to view details of individual contacts we again have to perform 
+two main tasks: create the **Handler** that will retrieve the contact from 
+the datastore and the **Template** to view the results in the browser.
+And of course we need to be able to select from the contact list a 
+single user whose details we're interested in.
 
 ### Handler
 
@@ -25,8 +26,9 @@ def contact_view(contact_id):
 
 ### Template
 
-After creating the handler, we are going to need a template to be able to present a contact's personal detail page. 
-Create a new file `contact_view.html` in the `templates` directory and paste the following code there:
+After creating the handler, we are going to need a template to be able to 
+present a contact's personal detail page. Create a new file `contact_view.html` 
+in the `templates` directory and paste the following code there:
 
 ```html
 # extends 'base.html'
