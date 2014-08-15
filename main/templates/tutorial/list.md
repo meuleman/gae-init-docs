@@ -1,11 +1,12 @@
 {% raw %}
 
-In order to present the contacts we will have to do three things: create the
-handler that will retrieve the contacts from the datastore, the template to
-present them in the browser and the link on the top bar to access this list.
+In order to present the contacts we will have to do two main things: create the
+**Handler** that will retrieve the contacts from the datastore and the **Template** to
+present them in the browser.
+After this, we need to perform a few smaller tasks like adding a link to the top navigation bar to access this list.
 
 
-### Contact List Handler
+### Handler
 
 Add the following code to the `contact.py` file:
 
@@ -28,12 +29,11 @@ def contact_list():
     )
 ```
 
-### Contact List Template
+### Template
 
 After creating the handler, we are going to need a template to be able to
 present a table of all the contacts that we've added so far. Create a new file
-`contact_list.html` in the `templates` directory
-and paste the following code there:
+`contact_list.html` in the `templates` directory and paste the following code there:
 
 ```html
 # extends 'base.html'
@@ -72,7 +72,7 @@ You can test the handler and the above template by visiting the url
 but in the next section we'll add a link to make it easier to access.
 
 
-### Finalise Contact Listing
+### Finalise
 
 As a final touch we're going to do two things: adding the link in the top bar
 and changing the redirect after creating the contact to take us to the this
@@ -96,13 +96,13 @@ Add the lines `3 - 5` inside the `<ul class="nav">...</ul>` element that you wil
 ```
 
 After refreshing the page ([http://localhost:8080/](http://localhost:8080/)),
-you should be able to see the link on the top and if you're in watching the
-contact list it should also be `active`.
+you should be able to see the link in the top navigation bar.
+Also, if you're currently on the Contact List page, this link should also be indicated as being `active`.
 
 #### Changing the redirect
 
 After creating a new contact we will now redirect the user to the contact
-list instead of the welcome page and also and also show her a message that
+list instead of the welcome page and also display a message that
 the new contact was successfully created.
 
 Find the following line in the contact_create handler:
@@ -120,8 +120,8 @@ return flask.redirect(flask.url_for('contact_list', order='-created'))
 
 The first line is to flash the message that the creation was successful.
 The argument `category` is optional and can be one of the
-following: `warning` (default), `danger`,
-`success` or `info`.
+following: `warning` (default), `danger`, `success` or `info`.
+This largely determines the way the message is visualised.
 
 In the second line notice that we are using the `order='-created'`
 in the `url_for` function, which will be translated to:
