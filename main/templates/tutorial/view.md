@@ -21,7 +21,7 @@ def contact_view(contact_id):
       contact_db=contact_db,
     )
 ```
-
+ 
 ### Contact View Template
 
 After creating the handler, we are going to need a template to be able to
