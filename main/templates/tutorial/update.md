@@ -1,14 +1,14 @@
 {% raw %}
 
-In order to update the contact we will have to do three things: create the
-handler that will retrieve the contact from the datastore, the template to
-update her in the browser and the link on the contact list for easy access.
+In order to change contact details and update the record in the phonebook database, 
+we again have to do two main things: create the **Handler** that will retrieve the 
+contact from the datastore and the **Template** to update the data in the browser.
+And again we'll also add an appropriate link to the contact list for easy access.
 
-In this step there are very similar actions on what we have to do
-that we've seen in creation and viewing of the contact. So in the final step
-we'll combine the create and update templates to maintain only one.
+Note that this section is actually conceptually very similar to the creation of contacts.
+Therefore, in the final step of this section, we will combine these two tasks into one template.
 
-### Contact Update Handler
+### Handler
 
 Add the following code to the `contact.py` file:
 
@@ -33,7 +33,7 @@ def contact_update(contact_id):
     )
 ```
 
-### Contact Update Template
+### Template
 
 After the handler, we are going to need a template to be able to update the
 user's details. Create a new file `contact_update.html` in the
@@ -66,12 +66,12 @@ user's details. Create a new file `contact_update.html` in the
 # endblock
 ```
 
-### Finalise Contact Update
+### Finalise
 
 As a final touch we're going to do two things:
 add some links to the contact list to access the update contacts page easier
-and also we'll get rid of the `contact_create.html` because it is
-very similar to the `contact_update.html`.
+and also we'll get rid of the `contact_create.html` file because it is
+very similar to the `contact_update.html` file.
 
 #### Add a link on the contact list
 
